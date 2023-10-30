@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Welcome to Customer Behavior Predictor Web Application<h1>
+            <meta charset="UTF-8">
+            <title>Customer Behavior Predictor App</title>
+            <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="login" text-align='center'>
+            <form action="{{url_for('predict')}}"method="post",text-align='center'>
+                <input type=="text", name="age", placeholder="age",required="required" /><br>
+                <input type=="text", name="job", placeholder="job",required="required" /><br>
+                <input type=="text", name="marital", placeholder="marital",required="required" /><br>
+                <input type=="text", name="education", placeholder="education",required="required" /><br>
+                <input type=="text", name="default", placeholder="default",required="required" /><br>
+                <input type=="text", name="balance", placeholder="balance",required="required" /><br>
+                <input type=="text", name="housing", placeholder="housing",required="required" /><br>
+                <input type=="text", name="loan", placeholder="loan",required="required" /><br>
+                <input type=="text", name="contact", placeholder="contact",required="required" /><br>
+                <input type=="text", name="day", placeholder="day",required="required" /><br>
+                <input type=="text", name="month", placeholder="month",required="required" /><br>
+                <input type=="text", name="duration", placeholder="duration",required="required" /><br>
+                <input type=="text", name="campaign", placeholder="campaign",required="required" /><br>
+                <input type=="text", name="pdays", placeholder="pdays",required="required" /><br>
+                <input type=="text", name="previous", placeholder="previous",required="required" /><br>
+                <input type=="text", name="poutcome", placeholder="poutcome",required="required" /><br>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+
+            <br>
+            <br>
+        </div>
+        {{prediction_text}}
+
+    </body>
+</html>
